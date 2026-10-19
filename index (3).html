@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b3c">
+  <meta name="description" content="WDTM verbindet Websites, Deko, Technik und Marketing zu einem stimmigen Auftritt für Unternehmen und lokale Geschäfte.">
+  <title>WDTM – Websites · Deko · Technik · Marketing</title>
+  <style>
+    :root {
+      --navy: #101b3c;
+      --ink: #172033;
+      --muted: #667085;
+      --paper: #f6f7fa;
+      --white: #fff;
+      --line: #e5e8ef;
+      --accent: #d5b46a;
+      --radius: 20px;
+      --shadow: 0 18px 55px rgba(16, 27, 60, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    header { background: var(--white); border-bottom: 1px solid var(--line); }
+    .topbar { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand img { display: block; width: min(260px, 48vw); height: auto; }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a { font-size: .9rem; font-weight: 650; text-decoration: none; color: #4b5565; }
+    nav a:hover, nav a:focus-visible { color: var(--navy); text-decoration: underline; text-underline-offset: 5px; }
+    .hero { padding: clamp(62px, 10vw, 112px) 0 76px; background: radial-gradient(ellipse at 85% 5%, #e8eaf1 0, transparent 38%), linear-gradient(180deg, #fff 0%, #f6f7fa 100%); }
+    .hero-inner { max-width: 820px; }
+    .eyebrow { color: #74602e; letter-spacing: .16em; text-transform: uppercase; font-size: .76rem; font-weight: 750; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 790px; margin: 14px 0 20px; color: var(--navy); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.45rem, 6vw, 4.6rem); font-weight: 500; line-height: 1.06; letter-spacing: -.035em; }
+    .hero p { max-width: 720px; color: #4c5668; font-size: clamp(1.05rem, 2vw, 1.2rem); }
+    .cta { display: inline-flex; align-items: center; margin-top: 12px; padding: 13px 20px; border-radius: 999px; background: var(--navy); color: #fff; font-weight: 700; text-decoration: none; transition: transform .18s, background .18s; }
+    .cta:hover { transform: translateY(-2px); background: #24345e; }
+    .services { padding: 74px 0 86px; }
+    .section-heading { max-width: 660px; margin-bottom: 34px; }
+    .section-heading h2 { margin: 8px 0 10px; font: 500 clamp(2rem, 4vw, 3rem)/1.15 Georgia, "Times New Roman", serif; color: var(--navy); }
+    .section-heading p { color: var(--muted); margin-bottom: 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { min-height: 235px; padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 6px 20px rgba(16, 27, 60, .025); }
+    .card-number { display: inline-grid; place-items: center; width: 38px; height: 38px; margin-bottom: 18px; border-radius: 50%; background: #f3eedf; color: #725d2c; font-size: .83rem; font-weight: 800; }
+    .card h3 { margin-bottom: 9px; color: var(--navy); font: 500 1.65rem/1.2 Georgia, "Times New Roman", serif; }
+    .card p { color: #596477; margin-bottom: 0; }
+    .closing { padding: 54px 0; background: var(--navy); color: #fff; }
+    .closing-inner { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+    .closing h2 { margin-bottom: 8px; font: 500 clamp(1.8rem, 3.5vw, 2.65rem)/1.2 Georgia, "Times New Roman", serif; }
+    .closing p { max-width: 670px; color: #d9deea; margin-bottom: 0; }
+    .closing .cta { background: var(--accent); color: #18203a; white-space: nowrap; }
+    footer { padding: 22px 0; color: #687184; font-size: .86rem; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    @media (max-width: 720px) {
+      .topbar { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px 18px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .closing-inner { grid-template-columns: 1fr; }
+      .closing .cta { justify-self: start; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#start" aria-label="WDTM – zur Startseite">
+        <img src="wdtm-logo.jpg" alt="WDTM – Websites, Deko, Technik, Marketing">
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#websites">Websites</a>
+        <a href="#deko">Deko</a>
+        <a href="#technik">Technik</a>
+        <a href="#marketing">Marketing</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="start">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <span class="eyebrow">Websites · Deko · Technik · Marketing</span>
+        <h1>Hinter jedem Geschäft steckt eine Geschichte.</h1>
+        <p>Viele Läden beginnen mit einer Idee, viel Herzblut und Menschen, die jeden Tag alles geben. Doch damit andere diese Arbeit entdecken, braucht es mehr als ein gutes Angebot: einen Auftritt, der Vertrauen schafft und in Erinnerung bleibt. WDTM verbindet dafür Gestaltung, Technik und Marketing – persönlich, durchdacht und passend zu Ihrem Geschäft.</p>
+        <a class="cta" href="#leistungen">Entdecken Sie, was möglich ist</a>
+      </div>
+    </section>
+
+    <section class="services" id="leistungen">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Vier Bereiche. Ein stimmiger Auftritt.</span>
+          <h2>Was wir für Sie tun</h2>
+          <p>Vom ersten digitalen Eindruck bis zu den kleinen Details vor Ort: Wir helfen dabei, Ihr Unternehmen sichtbar und wiedererkennbar zu machen.</p>
+        </div>
+        <div class="grid">
+          <article class="card" id="websites">
+            <span class="card-number">01</span>
+            <h3>Websites</h3>
+            <p>Wir gestalten moderne, responsive Websites nach Ihren Wünschen und passend zu Ihrem Unternehmen. Klar strukturiert und mit einem Design, das Ihre Kundinnen und Kunden gern entdecken.</p>
+          </article>
+          <article class="card" id="deko">
+            <span class="card-number">02</span>
+            <h3>Deko</h3>
+            <p>Mit individuell gestalteten Werbemitteln wie Bierdeckeln und Untersetzern aus Papier oder Holz wird Ihre Marke auch im Alltag sichtbar. Perspektivisch soll das Sortiment um Kleidung mit dem Logo Ihres Geschäfts erweitert werden.</p>
+          </article>
+          <article class="card" id="technik">
+            <span class="card-number">03</span>
+            <h3>Technik</h3>
+            <p>Wir bieten Systeme, die Abläufe erleichtern und Sie dabei unterstützen, Ihre Kundinnen und Kunden besser zu erreichen. Dazu gehören auch NFC-Bewertungskarten, mit denen Feedback schnell und unkompliziert abgegeben werden kann.</p>
+          </article>
+          <article class="card" id="marketing">
+            <span class="card-number">04</span>
+            <h3>Marketing</h3>
+            <p>Marketing verbindet alle vier Bereiche zu einem überzeugenden Gesamtauftritt: Website, Gestaltung, Technik und Kommunikation. So wird aus einzelnen Maßnahmen ein klares Bild, das Ihr Geschäft wiedererkennbar macht.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="kontakt">
+      <div class="wrap closing-inner">
+        <div>
+          <span class="eyebrow" style="color:#e7d6a9">Lassen Sie uns sprechen</span>
+          <h2>Ihre Idee verdient einen starken Auftritt.</h2>
+          <p>Sie möchten Ihr Geschäft sichtbarer machen oder haben schon eine konkrete Vorstellung? Schreiben Sie uns – gemeinsam finden wir heraus, was zu Ihnen passt.</p>
+        </div>
+        <a class="cta" href="mailto:wdtm.de@gmail.com">wdtm.de@gmail.com</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> WDTM</span>
+      <span>Websites · Deko · Technik · Marketing</span>
+    </div>
+  </footer>
+</body>
+</html>
